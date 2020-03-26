@@ -1,0 +1,14 @@
+<%= form_for @user, url: signin_path do |f| %>
+<div class="form-group">
+  <%= f.label :name, "Your name:" %>
+  <%= f.collection_select :name, @users, :id ,:name %>
+</div>
+<div class="form-group">
+<%= f.label :password, "Your password:" %>
+<%= f.password_field :password %>
+</div>
+<div class="actions">
+  <%= f.submit "Sign In" %>
+</div>
+  
+<% end %>
